@@ -9,21 +9,42 @@
 /* Begin PBXBuildFile section */
 		42935CA1285470B000C4234B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42935CA0285470B000C4234B /* AppDelegate.swift */; };
 		42935CA3285470B000C4234B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42935CA2285470B000C4234B /* SceneDelegate.swift */; };
-		42935CA5285470B000C4234B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42935CA4285470B000C4234B /* ViewController.swift */; };
 		42935CA8285470B000C4234B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42935CA6285470B000C4234B /* Main.storyboard */; };
 		42935CAA285470B400C4234B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42935CA9285470B400C4234B /* Assets.xcassets */; };
 		42935CAD285470B400C4234B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42935CAB285470B400C4234B /* LaunchScreen.storyboard */; };
+		42943BF228547B30008C4AAC /* PrintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943BF028547B30008C4AAC /* PrintExtensions.swift */; };
+		42943BF328547B30008C4AAC /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943BF128547B30008C4AAC /* Array.swift */; };
+		42943BF728547B8C008C4AAC /* CSVFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943BF628547B8C008C4AAC /* CSVFileManager.swift */; };
+		42943BF928547C2B008C4AAC /* Hotspot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943BF828547C2B008C4AAC /* Hotspot.swift */; };
+		42943BFC28547ED5008C4AAC /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 42943BFB28547ED5008C4AAC /* SwiftCSV */; };
+		42943BFE2854803A008C4AAC /* hotspots.csv in Resources */ = {isa = PBXBuildFile; fileRef = 42943BFD2854803A008C4AAC /* hotspots.csv */; };
+		42943C0128548606008C4AAC /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0028548606008C4AAC /* AppError.swift */; };
+		42943C05285495D1008C4AAC /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C04285495D1008C4AAC /* MapViewModel.swift */; };
+		42943C07285496D6008C4AAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C06285496D6008C4AAC /* MapViewController.swift */; };
+		42943C0A28549943008C4AAC /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0928549943008C4AAC /* Storyboardable.swift */; };
+		42943C0C28549961008C4AAC /* DataLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0B28549961008C4AAC /* DataLoadable.swift */; };
+		42943C0E28549AD6008C4AAC /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0D28549AD6008C4AAC /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42935C9D285470B000C4234B /* MapKitClasteringApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitClasteringApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42935CA0285470B000C4234B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42935CA2285470B000C4234B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42935CA4285470B000C4234B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42935CA7285470B000C4234B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42935CA9285470B400C4234B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42935CAC285470B400C4234B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42935CAE285470B400C4234B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42943BF028547B30008C4AAC /* PrintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintExtensions.swift; sourceTree = "<group>"; };
+		42943BF128547B30008C4AAC /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		42943BF628547B8C008C4AAC /* CSVFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVFileManager.swift; sourceTree = "<group>"; };
+		42943BF828547C2B008C4AAC /* Hotspot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotspot.swift; sourceTree = "<group>"; };
+		42943BFD2854803A008C4AAC /* hotspots.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hotspots.csv; sourceTree = "<group>"; };
+		42943C0028548606008C4AAC /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		42943C04285495D1008C4AAC /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		42943C06285496D6008C4AAC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		42943C0928549943008C4AAC /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		42943C0B28549961008C4AAC /* DataLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoadable.swift; sourceTree = "<group>"; };
+		42943C0D28549AD6008C4AAC /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42943BFC28547ED5008C4AAC /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,113 @@
 		42935C9F285470B000C4234B /* MapKitClasteringApp */ = {
 			isa = PBXGroup;
 			children = (
-				42935CA0285470B000C4234B /* AppDelegate.swift */,
-				42935CA2285470B000C4234B /* SceneDelegate.swift */,
-				42935CA4285470B000C4234B /* ViewController.swift */,
-				42935CA6285470B000C4234B /* Main.storyboard */,
-				42935CA9285470B400C4234B /* Assets.xcassets */,
-				42935CAB285470B400C4234B /* LaunchScreen.storyboard */,
-				42935CAE285470B400C4234B /* Info.plist */,
+				42935CB4285470BE00C4234B /* App */,
+				42943BF428547B51008C4AAC /* Services */,
+				42943C082854992E008C4AAC /* Protocols */,
+				42935CB62854792F00C4234B /* Extensions */,
+				42935CB82854795700C4234B /* Models */,
+				42935CB52854792100C4234B /* Modules */,
+				42935CBA2854796D00C4234B /* Storyboards */,
+				42935CB92854796500C4234B /* Resources */,
 			);
 			path = MapKitClasteringApp;
+			sourceTree = "<group>";
+		};
+		42935CB4285470BE00C4234B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				42935CA0285470B000C4234B /* AppDelegate.swift */,
+				42935CA2285470B000C4234B /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		42935CB52854792100C4234B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				42943C02285495A7008C4AAC /* Map */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		42935CB62854792F00C4234B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				42943BF128547B30008C4AAC /* Array.swift */,
+				42943BF028547B30008C4AAC /* PrintExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		42935CB82854795700C4234B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42943BF828547C2B008C4AAC /* Hotspot.swift */,
+				42943C0028548606008C4AAC /* AppError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42935CB92854796500C4234B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42943BFF28548040008C4AAC /* CSVFiles */,
+				42935CA9285470B400C4234B /* Assets.xcassets */,
+				42935CBB2854798900C4234B /* Plists */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		42935CBA2854796D00C4234B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				42935CA6285470B000C4234B /* Main.storyboard */,
+				42935CAB285470B400C4234B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		42935CBB2854798900C4234B /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				42935CAE285470B400C4234B /* Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		42943BF428547B51008C4AAC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				42943BF628547B8C008C4AAC /* CSVFileManager.swift */,
+				42943C0D28549AD6008C4AAC /* AlertManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		42943BFF28548040008C4AAC /* CSVFiles */ = {
+			isa = PBXGroup;
+			children = (
+				42943BFD2854803A008C4AAC /* hotspots.csv */,
+			);
+			path = CSVFiles;
+			sourceTree = "<group>";
+		};
+		42943C02285495A7008C4AAC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				42943C06285496D6008C4AAC /* MapViewController.swift */,
+				42943C04285495D1008C4AAC /* MapViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		42943C082854992E008C4AAC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				42943C0B28549961008C4AAC /* DataLoadable.swift */,
+				42943C0928549943008C4AAC /* Storyboardable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +203,9 @@
 			dependencies = (
 			);
 			name = MapKitClasteringApp;
+			packageProductDependencies = (
+				42943BFB28547ED5008C4AAC /* SwiftCSV */,
+			);
 			productName = MapKitClasteringApp;
 			productReference = 42935C9D285470B000C4234B /* MapKitClasteringApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 42935C94285470B000C4234B;
+			packageReferences = (
+				42943BFA28547ED5008C4AAC /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+			);
 			productRefGroup = 42935C9E285470B000C4234B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +253,7 @@
 			files = (
 				42935CAD285470B400C4234B /* LaunchScreen.storyboard in Resources */,
 				42935CAA285470B400C4234B /* Assets.xcassets in Resources */,
+				42943BFE2854803A008C4AAC /* hotspots.csv in Resources */,
 				42935CA8285470B000C4234B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +265,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42935CA5285470B000C4234B /* ViewController.swift in Sources */,
+				42943C0A28549943008C4AAC /* Storyboardable.swift in Sources */,
+				42943BF328547B30008C4AAC /* Array.swift in Sources */,
+				42943BF228547B30008C4AAC /* PrintExtensions.swift in Sources */,
+				42943C07285496D6008C4AAC /* MapViewController.swift in Sources */,
+				42943C0E28549AD6008C4AAC /* AlertManager.swift in Sources */,
 				42935CA1285470B000C4234B /* AppDelegate.swift in Sources */,
+				42943C0128548606008C4AAC /* AppError.swift in Sources */,
+				42943C0C28549961008C4AAC /* DataLoadable.swift in Sources */,
+				42943C05285495D1008C4AAC /* MapViewModel.swift in Sources */,
+				42943BF728547B8C008C4AAC /* CSVFileManager.swift in Sources */,
+				42943BF928547C2B008C4AAC /* Hotspot.swift in Sources */,
 				42935CA3285470B000C4234B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,10 +425,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UHJFHS6M7R;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MapKitClasteringApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MapKitClasteringApp/Resources/Plists/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +452,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UHJFHS6M7R;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MapKitClasteringApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MapKitClasteringApp/Resources/Plists/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +492,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42943BFA28547ED5008C4AAC /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42943BFB28547ED5008C4AAC /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42943BFA28547ED5008C4AAC /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42935C95285470B000C4234B /* Project object */;
 }
