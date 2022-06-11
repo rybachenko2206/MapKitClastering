@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9LO-mS-B9J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="o7P-j7-feJ">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" systemColor="systemBlueColor"/>
@@ -25,16 +28,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="o7P-j7-feJ" firstAttribute="centerX" secondItem="wBX-Sy-2tv" secondAttribute="centerX" id="690-Gy-F48"/>
+                            <constraint firstAttribute="bottom" secondItem="9LO-mS-B9J" secondAttribute="bottom" id="Opf-9l-g6G"/>
+                            <constraint firstItem="9LO-mS-B9J" firstAttribute="trailing" secondItem="RPc-ul-VJp" secondAttribute="trailing" id="Wyp-p7-U93"/>
+                            <constraint firstItem="9LO-mS-B9J" firstAttribute="leading" secondItem="RPc-ul-VJp" secondAttribute="leading" id="Yz1-om-3UR"/>
                             <constraint firstItem="o7P-j7-feJ" firstAttribute="centerY" secondItem="wBX-Sy-2tv" secondAttribute="centerY" id="oga-x3-q7D"/>
+                            <constraint firstItem="9LO-mS-B9J" firstAttribute="top" secondItem="wBX-Sy-2tv" secondAttribute="top" id="rqV-pQ-16q"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="o7P-j7-feJ" id="QyD-oj-pdg"/>
+                        <outlet property="mapView" destination="9LO-mS-B9J" id="Y8q-xF-k7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EE-wZ-MDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="129"/>
+            <point key="canvasLocation" x="73.913043478260875" y="128.57142857142856"/>
         </scene>
     </scenes>
     <resources>

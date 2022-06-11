@@ -24,6 +24,7 @@
 		42943C0A28549943008C4AAC /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0928549943008C4AAC /* Storyboardable.swift */; };
 		42943C0C28549961008C4AAC /* DataLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0B28549961008C4AAC /* DataLoadable.swift */; };
 		42943C0E28549AD6008C4AAC /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0D28549AD6008C4AAC /* AlertManager.swift */; };
+		42943C112854BFBC008C4AAC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42943C102854BFBC008C4AAC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		42943C0928549943008C4AAC /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		42943C0B28549961008C4AAC /* DataLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoadable.swift; sourceTree = "<group>"; };
 		42943C0D28549AD6008C4AAC /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		42943C102854BFBC008C4AAC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42943C112854BFBC008C4AAC /* MapKit.framework in Frameworks */,
 				42943BFC28547ED5008C4AAC /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +67,7 @@
 			children = (
 				42935C9F285470B000C4234B /* MapKitClasteringApp */,
 				42935C9E285470B000C4234B /* Products */,
+				42943C0F2854BFBC008C4AAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +189,14 @@
 				42943C0928549943008C4AAC /* Storyboardable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		42943C0F2854BFBC008C4AAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42943C102854BFBC008C4AAC /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

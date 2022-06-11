@@ -24,7 +24,7 @@ class CSVFileManager: CSVFileManagerProtocol {
                 pl("mapping hotspots with strings is started, strings.count = \(csv.header.count)")
                 let hotspots: [Hotspot] = csv.header.compactMap({ Hotspot(with: $0) })
                 
-                pl("mapping hotspots with strings is started, hotspots.count = \(hotspots.count)")
+                pl("mapping hotspots with strings is finished, hotspots.count = \(hotspots.count)")
                 completion(hotspots)
             } catch let appError as AppError {
                 failure(appError)

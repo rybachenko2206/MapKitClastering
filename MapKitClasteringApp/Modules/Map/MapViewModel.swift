@@ -10,6 +10,9 @@ import Combine
 
 protocol PMapViewModel: DataLoadable {
     var title: String { get }
+    var hotspotsPublisher: AnyPublisher<[Hotspot], Never> { get }
+    var isLoadingPublisher: AnyPublisher<Bool, Never> { get }
+    var errorPublisher: AnyPublisher<AppError, Never> { get }
     
     func fetchHotspots()
 }
@@ -18,7 +21,7 @@ class MapViewModel: PMapViewModel {
     // MARK: - Properties
     private let csvFileManager: CSVFileManagerProtocol
     
-    @Published private var annotations: [Hotspot] = []
+    @Published private var hotspots: [Hotspot] = []
     @Published private var isLoading: Bool = false
     @Published private var error: AppError?
     
@@ -30,6 +33,10 @@ class MapViewModel: PMapViewModel {
         $error
             .compactMap({ $0 })
             .eraseToAnyPublisher()
+    }
+    
+    var hotspotsPublisher: AnyPublisher<[Hotspot], Never> {
+        $hotspots.eraseToAnyPublisher()
     }
     
     let title = "Hotspots"
@@ -45,7 +52,7 @@ class MapViewModel: PMapViewModel {
         
         csvFileManager.fetchHotspots(completion: { [weak self] hotspots in
             self?.isLoading = false
-            self?.annotations = hotspots
+            self?.hotspots = hotspots
         }, failure: { [weak self] error in
             self?.isLoading = false
             self?.error = error

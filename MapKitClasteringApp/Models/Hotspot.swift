@@ -6,11 +6,20 @@
 //
 
 import Foundation
+import MapKit
 
-struct Hotspot: Identifiable {
+class Hotspot: NSObject, Identifiable, MKAnnotation {
+    
     let id: Int
-    let lat: Double
-    let long: Double
+    
+    let title: String? = nil
+    let subtitle: String? = nil
+    let coordinate: CLLocationCoordinate2D
+    
+    init(id: Int, lat: Double, lon: Double) {
+        self.id = id
+        self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+    }
     
     init?(with string: String) {
         let components = string.components(separatedBy: ",")
@@ -20,7 +29,6 @@ struct Hotspot: Identifiable {
         else { return nil }
         
         id = identifier
-        lat = latitude
-        long = longitude
+        coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
