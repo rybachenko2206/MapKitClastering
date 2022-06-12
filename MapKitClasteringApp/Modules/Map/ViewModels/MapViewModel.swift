@@ -14,6 +14,7 @@ protocol PMapViewModel: DataLoadable {
     var isLoadingPublisher: AnyPublisher<Bool, Never> { get }
     var errorPublisher: AnyPublisher<AppError, Never> { get }
     
+    func setIsLoading(_ isLoading: Bool)
     func fetchHotspots()
 }
 
@@ -47,6 +48,10 @@ class MapViewModel: PMapViewModel {
     }
     
     // MARK: - Public funcs
+    func setIsLoading(_ isLoading: Bool) {
+        self.isLoading = isLoading
+    }
+    
     func fetchHotspots() {
         isLoading = true
         

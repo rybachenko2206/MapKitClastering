@@ -16,6 +16,9 @@ class Hotspot: NSObject, Identifiable, MKAnnotation {
     let subtitle: String? = nil
     let coordinate: CLLocationCoordinate2D
     
+    static let annotationId = "HotspotAnnotationId"
+    static let clusterId = "HotspotClusterId"
+    
     init(id: Int, lat: Double, lon: Double) {
         self.id = id
         self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)

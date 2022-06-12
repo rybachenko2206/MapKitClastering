@@ -25,6 +25,7 @@
 		42943C0C28549961008C4AAC /* DataLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0B28549961008C4AAC /* DataLoadable.swift */; };
 		42943C0E28549AD6008C4AAC /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C0D28549AD6008C4AAC /* AlertManager.swift */; };
 		42943C112854BFBC008C4AAC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42943C102854BFBC008C4AAC /* MapKit.framework */; };
+		42943C15285503B9008C4AAC /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42943C14285503B9008C4AAC /* ClusterAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		42943C0B28549961008C4AAC /* DataLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoadable.swift; sourceTree = "<group>"; };
 		42943C0D28549AD6008C4AAC /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		42943C102854BFBC008C4AAC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		42943C14285503B9008C4AAC /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				42943C06285496D6008C4AAC /* MapViewController.swift */,
-				42943C04285495D1008C4AAC /* MapViewModel.swift */,
+				42943C132855038B008C4AAC /* ViewModels */,
+				42943C122855037F008C4AAC /* CustomViews */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -197,6 +200,22 @@
 				42943C102854BFBC008C4AAC /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42943C122855037F008C4AAC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				42943C14285503B9008C4AAC /* ClusterAnnotationView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		42943C132855038B008C4AAC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				42943C04285495D1008C4AAC /* MapViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +308,7 @@
 				42943BF728547B8C008C4AAC /* CSVFileManager.swift in Sources */,
 				42943BF928547C2B008C4AAC /* Hotspot.swift in Sources */,
 				42935CA3285470B000C4234B /* SceneDelegate.swift in Sources */,
+				42943C15285503B9008C4AAC /* ClusterAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

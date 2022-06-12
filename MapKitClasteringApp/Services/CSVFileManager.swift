@@ -21,10 +21,10 @@ class CSVFileManager: CSVFileManagerProtocol {
             do {
                 let csv = try self.fetchCSV(from: "hotspots")
                 
-                pl("mapping hotspots with strings is started, strings.count = \(csv.header.count)")
+                pl("mapping hotspots with strings is started, strings.count = \(csv.header.count), \n at\(Date())")
                 let hotspots: [Hotspot] = csv.header.compactMap({ Hotspot(with: $0) })
                 
-                pl("mapping hotspots with strings is finished, hotspots.count = \(hotspots.count)")
+                pl("mapping hotspots with strings is finished, hotspots.count = \(hotspots.count) \n at\(Date())")
                 completion(hotspots)
             } catch let appError as AppError {
                 failure(appError)
@@ -35,7 +35,7 @@ class CSVFileManager: CSVFileManagerProtocol {
     }
     
     private func fetchCSV(from fileName: String, fileExtension: String = ".csv") throws -> CSV {
-        pl("fetch data from .csv file is started")
+        pl("fetch data from .csv file is started \n at\(Date())")
         do {
             let resource: CSV? = try CSV(name: fileName,
                                         extension: fileExtension,
@@ -44,7 +44,7 @@ class CSVFileManager: CSVFileManagerProtocol {
                                         encoding: .utf8,
                                         loadColumns: true)
             
-            pl(".csv file is fetched successfully: \(resource != nil)")
+            pl(".csv file is fetched successfully: \(resource != nil) \n at\(Date())")
             guard let csv = resource else {
                 assertionFailure("Failed data from .csv file, object is nil")
                 throw AppError.defaultError
