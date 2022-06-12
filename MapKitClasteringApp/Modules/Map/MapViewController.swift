@@ -18,12 +18,11 @@ class MapViewController: UIViewController, Storyboardable {
     static var storyboardName: Storyboard { .main }
     var viewModel: PMapViewModel?
     
-    
-    private let defaultDistance = CLLocationDistance(20_000)
     private let locationManager = CLLocationManager()
     private var subscriptions: Set<AnyCancellable> = []
     
-    let initialCoordinate = CLLocationCoordinate2D(latitude: 50.449792, longitude: 30.523192)
+    private let defaultDistance = CLLocationDistance(20_000)
+    private let initialCoordinate = CLLocationCoordinate2D(latitude: 50.449792, longitude: 30.523192)
 
     // MARK: - Override funcs
     override func viewDidLoad() {
@@ -132,34 +131,18 @@ extension MapViewController: MKMapViewDelegate {
             annotationView.clusteringIdentifier = Hotspot.clusterId
             annotationView.displayPriority = .defaultLow
             return annotationView
-        }
-        // default cluster annotation view
-//        else if let cluster = annotation as? MKClusterAnnotation {
-//            let reuseId = "defaultClusterAnnotationView"
-//            let clusterView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) ?? MKAnnotationView(annotation: cluster, reuseIdentifier: reuseId)
-//            clusterView.annotation = cluster
-//            clusterView.image = UIImage(systemName: "wifi.square.fill")
-//            return clusterView
-//        }
-        
-        // Custom cluster annotation view
-        else if let cluster = annotation as? MKClusterAnnotation {
+        } else if let cluster = annotation as? MKClusterAnnotation {
             let clusterView = mapView.dequeueReusableAnnotationView(withIdentifier: ClusterAnnotationView.reuseId)
             ?? MKAnnotationView(annotation: annotation, reuseIdentifier: ClusterAnnotationView.reuseId)
-            
             clusterView.annotation = cluster
-            
             return clusterView
-        }
-        else {
+        } else {
             return nil
         }
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        pf()
         guard view is ClusterAnnotationView else { return }
-//        guard view.reuseIdentifier == "defaultClusterAnnotationView" else { return }
         let currentSpan = mapView.region.span
         let zoomSpan = MKCoordinateSpan(latitudeDelta: currentSpan.latitudeDelta / 2.0, longitudeDelta: currentSpan.longitudeDelta / 2.0)
         let zoomCoordinate = view.annotation?.coordinate ?? mapView.region.center

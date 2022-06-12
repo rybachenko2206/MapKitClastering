@@ -10,10 +10,11 @@ import MapKit
 
 class ClusterAnnotationView: MKAnnotationView {
     static let reuseId = "ClusterAnnotationView"
+    
     override var annotation: MKAnnotation? {
         didSet {
             guard let cluster = annotation as? MKClusterAnnotation else { return }
-            displayPriority = .defaultHigh
+            displayPriority = .defaultLow
             
             let imageType = ClusterImageType.type(for: cluster.memberAnnotations.count)
             self.image = imageType.image
@@ -35,11 +36,9 @@ extension ClusterAnnotationView {
         }
         
         private var imageConfigurations: UIImage.SymbolConfiguration {
-            let colorsConfig = UIImage.SymbolConfiguration(paletteColors: [.systemBlue, .white])
             let sizeConfig = UIImage.SymbolConfiguration(pointSize: imagePointSize,
                                                          weight: .regular,
                                                          scale: imageScale)
-            sizeConfig.applying(colorsConfig)
             return sizeConfig
         }
         

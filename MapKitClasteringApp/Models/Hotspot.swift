@@ -9,9 +9,7 @@ import Foundation
 import MapKit
 
 class Hotspot: NSObject, Identifiable, MKAnnotation {
-    
     let id: Int
-    
     let title: String? = nil
     let subtitle: String? = nil
     let coordinate: CLLocationCoordinate2D
