@@ -7,9 +7,11 @@
 
 import Foundation
 import Combine
+import MapKit
 
 protocol PMapViewModel: DataLoadable {
     var title: String { get }
+    var visibleMapRect: MKMapRect? { get set }
     var hotspotsPublisher: AnyPublisher<[Hotspot], Never> { get }
     var isLoadingPublisher: AnyPublisher<Bool, Never> { get }
     var errorPublisher: AnyPublisher<AppError, Never> { get }
@@ -22,7 +24,10 @@ class MapViewModel: PMapViewModel {
     // MARK: - Properties
     private let csvFileManager: CSVFileManagerProtocol
     
-    @Published private var hotspots: [Hotspot] = []
+    private var allHotspots: [Hotspot] = []
+    private var addedHotspots: Set<Hotspot> = []
+    
+    @Published private var filteredHotspots: [Hotspot] = []
     @Published private var isLoading: Bool = false
     @Published private var error: AppError?
     
@@ -37,7 +42,18 @@ class MapViewModel: PMapViewModel {
     }
     
     var hotspotsPublisher: AnyPublisher<[Hotspot], Never> {
-        $hotspots.eraseToAnyPublisher()
+        $filteredHotspots.eraseToAnyPublisher()
+    }
+    
+    var visibleMapRect: MKMapRect? {
+        didSet {
+            if let oldMapRect = oldValue,
+                let newMapRect = visibleMapRect,
+               oldMapRect.contains(newMapRect)
+            { return }
+            
+            filterAnnotations()
+        }
     }
     
     let title = "Hotspots"
@@ -56,8 +72,10 @@ class MapViewModel: PMapViewModel {
         isLoading = true
         
         csvFileManager.fetchHotspots(completion: { [weak self] hotspots in
-            self?.isLoading = false
-            self?.hotspots = hotspots
+            guard let self = self else { return }
+            self.isLoading = false
+            self.allHotspots = hotspots
+            self.filterAnnotations()
         }, failure: { [weak self] error in
             self?.isLoading = false
             self?.error = error
@@ -66,4 +84,21 @@ class MapViewModel: PMapViewModel {
     
     
     // MARK: - Private funcs
+    private func filterAnnotations() {
+        guard allHotspots.count > 0, let mapRect = visibleMapRect else { return }
+        isLoading = true
+        
+        let bgQueue = DispatchQueue(label: "bgQueue", qos: .userInteractive)
+        bgQueue.async { [weak self] in
+            guard let self = self else { return }
+            
+            let filteredArray = self.allHotspots.filter({ mapRect.contains(MKMapPoint($0.coordinate)) })
+            var filteredSet = Set(filteredArray)
+            filteredSet = filteredSet.subtracting(self.addedHotspots)
+            
+            self.filteredHotspots = Array(filteredSet)
+            self.addedHotspots = self.addedHotspots.union(filteredSet)
+            self.isLoading = false
+        }
+    }
 }

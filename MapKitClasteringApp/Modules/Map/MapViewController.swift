@@ -22,6 +22,7 @@ class MapViewController: UIViewController, Storyboardable {
     private var subscriptions: Set<AnyCancellable> = []
     
     private let defaultDistance = CLLocationDistance(20_000)
+    private let maxDistance = CLLocationDistance(50_000)
     private let initialCoordinate = CLLocationCoordinate2D(latitude: 50.449792, longitude: 30.523192)
 
     // MARK: - Override funcs
@@ -72,6 +73,7 @@ class MapViewController: UIViewController, Storyboardable {
         
         let region = MKCoordinateRegion(center: initialCoordinate, latitudinalMeters: defaultDistance, longitudinalMeters: defaultDistance)
         mapView.setRegion(region, animated: true)
+        mapView.setCameraZoomRange(MKMapView.CameraZoomRange(maxCenterCoordinateDistance: maxDistance), animated: false)
         
         mapView.register(ClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: ClusterAnnotationView.reuseId)
     }
@@ -148,5 +150,9 @@ extension MapViewController: MKMapViewDelegate {
         let zoomCoordinate = view.annotation?.coordinate ?? mapView.region.center
         let zoomed = MKCoordinateRegion(center: zoomCoordinate, span: zoomSpan)
         mapView.setRegion(zoomed, animated: true)
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        viewModel?.visibleMapRect = mapView.visibleMapRect
     }
 }
